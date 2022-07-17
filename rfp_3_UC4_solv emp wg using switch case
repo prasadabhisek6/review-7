@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main (void)
+{
+    int paycode;
+    int hours;
+    int salary;
+    int rate;
+    int overtime_rate;
+
+    rate=10;
+    overtime_rate=15;
+
+    printf ("Please Enter employee paycode\n");
+    scanf("%d",&paycode);           
+
+    switch (paycode) {        
+    case 1:
+         printf ("Manager salary is $5000");
+         break;
+    case 2: 
+       printf ("Enter hours\n");
+       scanf ("%d",&hours); 
+
+       if (hours <=40){
+           salary=hours * rate;
+           printf ("%d",&salary);
+       }
+       break;             
+    default:
+       printf ("No salary information");  
+       break;        
+   }        
+    getch ();        
+}
