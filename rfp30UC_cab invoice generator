@@ -1,0 +1,33 @@
+public class InvoiceGenerator {
+		
+
+		    private static final double MINIMUM_COST_PER_KILOMETER = 10;
+		    private static final int COST_PER_MINUTE = 1;
+		
+
+		    public double calculateFare(double distance, int time) {
+		        return distance * MINIMUM_COST_PER_KILOMETER + time * COST_PER_MINUTE;
+		    }
+		}
+ 15  src/test/java/CabInvoiceGeneratorTest.java
+		@@ -0,0 +1,15 @@
+		import org.junit.Assert;
+		import org.junit.Test;
+		
+
+		public class CabInvoiceGeneratorTest {
+		
+
+		    @Test
+		    public void whenGivenDistanceAndTime_ShouldReturnTotalFare() {
+		
+
+		        InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
+		        double distance = 2.0;
+		        int time = 5;
+		        double fare = invoiceGenerator.calculateFare(distance, time);
+		        Assert.assertEquals(25, fare, 0.0);
+		    }
+		}
+0 comments on commit 5f4e5b0
+
