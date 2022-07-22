@@ -1,0 +1,8 @@
+   function [p] = MAX(g,h,j)
+if g>h && g>j
+    p=g;
+elseif h>g && h>j
+    p=h;
+else
+    p=j;
+end
